@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<RuntimeSrcDir>/Users/naricc/workspace/runtime-wasm-aot-runtime-tests/src</RuntimeSrcDir>
+	<TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <Import Project="$(RuntimeSrcDir)/mono/wasm/build/WasmApp.LocalBuild.props" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <OutputPath>bin</OutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TargetFramework>net6.0</TargetFramework>
+    <AppDir>$(MSBuildThisFileDirectory)\bin\$TFM$\browser-wasm\publish</AppDir>
+    <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
+    <RuntimeSrcDir>/Users/naricc/workspace/runtime-wasm-aot-runtime-tests/src/</RuntimeSrcDir>
+    <WasmMainJSPath>$(MonoProjectRoot)\wasm\runtime-test.js</WasmMainJSPath>
+  </PropertyGroup>
+
+</Project>
+
